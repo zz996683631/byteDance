@@ -30,11 +30,11 @@ $(function(){
 		$('.carousel ul').stop().animate({"left":-2000*num},400)
 		$(".move ol li").eq(num).css("color","white").siblings().css("color","#A1A6DA");
 	}
-	$(".carousel").hover(function(){
-		$("#prev,#next").show(300);
+	$("#carousel").hover(function(){
+		$("#prev,#next").stop().show(300);
 	},
 	function(){
-		$("#prev,#next").hide(300);
+		$("#prev,#next").stop().hide(300);
 	})
 	$(".move ol li").mouseover(function(){
 		num=$(this).index();
